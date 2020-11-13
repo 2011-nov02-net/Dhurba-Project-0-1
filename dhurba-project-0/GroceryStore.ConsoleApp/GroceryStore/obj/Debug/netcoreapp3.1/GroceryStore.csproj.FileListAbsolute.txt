@@ -1,0 +1,13 @@
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.exe
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.deps.json
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.runtimeconfig.json
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.runtimeconfig.dev.json
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.dll
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\bin\Debug\netcoreapp3.1\GroceryStore.pdb
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.csprojAssemblyReference.cache
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.AssemblyInfoInputs.cache
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.AssemblyInfo.cs
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.csproj.CoreCompileInputs.cache
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.dll
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.pdb
+C:\Revature\dhurba-project-02\GroceryStore.ConsoleApp\GroceryStore\obj\Debug\netcoreapp3.1\GroceryStore.genruntimeconfig.cache
