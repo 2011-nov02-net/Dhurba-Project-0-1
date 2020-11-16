@@ -13,12 +13,12 @@ namespace GroceryStore
 
 
         //get price of the product from list with the help of productId(provided by customer)
-        public double GetPrice(int ProductId)
+        /*public double GetPrice(int ProductId)
         {
 
-            return
+            
         }
-
+        */
         //reduce quantity(bought by customer) of product sold from the list of product
         public void reduceQuantity(int quantityBought)
         {
@@ -26,10 +26,10 @@ namespace GroceryStore
         }
 
         //get name of the product using product id(provided by customer)
-        public string GetName(int productid)
+       /* public string GetName(int productid)
         {
             return 
-        }
+        }*/
 
     }  
 }

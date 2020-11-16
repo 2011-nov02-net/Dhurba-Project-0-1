@@ -12,12 +12,13 @@ namespace GroceryStore
 
         {
             //creating 3 walmart stores and adding it to the list 
-            Store store1 = new Store("1", "Walmart1", "Blacklick");
+           /* Store store1 = new Store("1", "Walmart1", "Blacklick");
             Store store2 = new Store("2", "Walmart1", "Blacklick");
             Store store3 = new Store("3", "Walmart1", "Blacklick");
             Store.AddStore(store1);
             Store.AddStore(store2);
             Store.AddStore(store3);
+           */
 
 
 
@@ -36,26 +37,26 @@ namespace GroceryStore
             DisplayStore myDisplayProduct = new DisplayStore();
 
             //initializing allStore
-            List<Store> storeList = allStore();
+            //List<Store> storeList = allStore();
 
             //calling method of DisplayStore to display list of store
-            myDisplayProduct.FormatAndDisplay(storeList);
+           // myDisplayProduct.FormatAndDisplay(storeList);
 
             //customer choice of store
             string storeNumber = Console.ReadLine();
-            int storenumber = Int32.Parse(storeNumber);
+           // int storenumber = Int.Parse(storeNumber);
             //display items available at that store
-            List<List<Product>> desiredProduct = allProduct();
+           // List<List<Product>> desiredProduct = allProduct();
 
             //creating object of class DisplayProduct
             DisplayProduct displayProduct = new DisplayProduct();
-            displayProduct.FormatAndDisplay(desiredProduct, storenumber);
+            //displayProduct.FormatAndDisplay(desiredProduct, storenumber);
             
             
              
 
         }
-
+/*
         static List<Store> allStore()
         {
             return new List<Store>{
@@ -121,6 +122,6 @@ namespace GroceryStore
     }
 
 
-}
+
     
 

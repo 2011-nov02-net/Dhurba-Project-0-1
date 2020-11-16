@@ -8,7 +8,7 @@ namespace GroceryStore
         {
             foreach (var store in storeList)
             {
-                Console.WriteLine($"Id:{store.Id} Name:{store.Name} Location:{store.Location}");
+                //Console.WriteLine($"Id:{store.Id} Name:{store.Name} Location:{store.Location}");
             }
         }
 
