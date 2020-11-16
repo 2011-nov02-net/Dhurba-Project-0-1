@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {}
+    "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {
+    "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj",
+        "projectUniqueName": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj",
         "projectName": "GroceryStore.DataModel",
-        "projectPath": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj",
+        "projectPath": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj",
         "packagesPath": "C:\\Users\\songs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\obj\\",
+        "outputPath": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\songs\\AppData\\Roaming\\NuGet\\NuGet.Config",

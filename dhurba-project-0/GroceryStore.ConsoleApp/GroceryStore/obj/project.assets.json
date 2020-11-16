@@ -5785,11 +5785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\GroceryStore.csproj",
+      "projectUniqueName": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\GroceryStore.csproj",
       "projectName": "GroceryStore",
-      "projectPath": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\GroceryStore.csproj",
+      "projectPath": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\GroceryStore.csproj",
       "packagesPath": "C:\\Users\\songs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\obj\\",
+      "outputPath": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\songs\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5805,8 +5805,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {
-              "projectPath": "C:\\Users\\songs\\source\\repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj"
+            "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj": {
+              "projectPath": "C:\\Users\\songs\\Source\\Repos\\Dhurba-Project-0-1\\dhurba-project-0\\GroceryStore.ConsoleApp\\GroceryStore.DataModel\\GroceryStore.DataModel.csproj"
             }
           }
         }

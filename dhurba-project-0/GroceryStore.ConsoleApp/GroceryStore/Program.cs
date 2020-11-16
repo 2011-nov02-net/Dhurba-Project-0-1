@@ -1,26 +1,23 @@
 ﻿
+using GroceryStore.DataModel;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace GroceryStore
 {
     public class Program
     {
-       
-        
+        static DbContextOptions<GroceryStoreContext> s_dbContextOptions;
+
+
         static void Main(string[] args)
 
         {
-            //creating 3 walmart stores and adding it to the list 
-           /* Store store1 = new Store("1", "Walmart1", "Blacklick");
-            Store store2 = new Store("2", "Walmart1", "Blacklick");
-            Store store3 = new Store("3", "Walmart1", "Blacklick");
-            Store.AddStore(store1);
-            Store.AddStore(store2);
-            Store.AddStore(store3);
-           */
-
-
+            var OptionBuilder = new DbContextOptionsBuilder<GroceryStoreContext>();
+            OptionBuilder.UseSqlServer(connectionString);
+            s_dbContextOptions = OptionBuilder.Options;
 
 
 
@@ -52,9 +49,20 @@ namespace GroceryStore
             DisplayProduct displayProduct = new DisplayProduct();
             //displayProduct.FormatAndDisplay(desiredProduct, storenumber);
             
-            
-             
+         }
+        static void GetConnectionString()
+        {
+            string path = "../../../../../../desktop/connectionStringGrocery";
+            string json;
+            try
+            {
+                json = File.ReadAllText(path);
+            }
+            catch(IOException)
+            {
 
+            }
+           
         }
 /*
         static List<Store> allStore()
