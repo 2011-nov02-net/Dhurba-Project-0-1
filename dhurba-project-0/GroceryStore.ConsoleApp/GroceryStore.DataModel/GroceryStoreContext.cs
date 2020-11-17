@@ -198,6 +198,11 @@ namespace GroceryStore.DataModel
             OnModelCreatingPartial(modelBuilder);
         }
 
+        public void Product(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
+
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

@@ -1,9 +1,13 @@
 ﻿
 using GroceryStore.DataModel;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Text.Json;
 
 namespace GroceryStore
 {
@@ -15,53 +19,160 @@ namespace GroceryStore
         static void Main(string[] args)
 
         {
-            var OptionBuilder = new DbContextOptionsBuilder<GroceryStoreContext>();
-            OptionBuilder.UseSqlServer(connectionString);
-            s_dbContextOptions = OptionBuilder.Options;
+            Console.WriteLine("Welcome to the  Grocery Store, ");
+            Console.WriteLine("press 'Q' to quit");
+            Console.WriteLine("To continue-Please provide your 9 digit ssn");
 
-
-
-
-
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Welcome back to Dhurba Grocery Store, Are you John, Matt, Jessica or Shayam");
-            string customerName = Console.ReadLine();
-            Console.WriteLine($"Welcome {customerName}, Nice to see u again. Please choose one of the store (1,2 or 3) that you would like to shop from");
-
-            // display list of store and ask to choose one
+            string Quit = "s";
             
-            //creating an object of class DisplayStore
-            DisplayStore myDisplayProduct = new DisplayStore();
 
-            //initializing allStore
-            //List<Store> storeList = allStore();
+            while (Quit != "q")
+            {
+                //log in a file groceryLogs.txt
+                using var logStream = new StreamWriter("groceryLogs.txt");
+                //optionbuilder and useSql server  for c# to connect to the database
+                var OptionBuilder = new DbContextOptionsBuilder<GroceryStoreContext>();
+                OptionBuilder.UseSqlServer(GetConnectionString());
+                //logging to groceryLogs using optionbuilder
+                OptionBuilder.LogTo(logStream.Write,LogLevel.Information);
+                //using optionBuilder to get option which is used in DBcontext to get the context.
+                s_dbContextOptions = OptionBuilder.Options;
 
-            //calling method of DisplayStore to display list of store
-           // myDisplayProduct.FormatAndDisplay(storeList);
+                //checking if the customer is in the database or is a new customer
+                //if the customer exist, ask to choose from one of the three locations.
+                var ssn = Console.ReadLine();
+                searchForCustomer(ssn);
 
-            //customer choice of store
-            string storeNumber = Console.ReadLine();
-           // int storenumber = Int.Parse(storeNumber);
-            //display items available at that store
-           // List<List<Product>> desiredProduct = allProduct();
 
-            //creating object of class DisplayProduct
-            DisplayProduct displayProduct = new DisplayProduct();
-            //displayProduct.FormatAndDisplay(desiredProduct, storenumber);
-            
-         }
-        static void GetConnectionString()
+
+                string idOfStore = Console.ReadLine();
+             
+                Display.DisplayProductList(s_dbContextOptions, idOfStore);
+
+
+                
+
+
+
+
+
+
+
+
+               
+
+
+
+               
+                
+               
+               
+                
+               
+                
+
+                // display list of store and ask to choose one
+
+                //creating an object of class DisplayStore
+                DisplayStore myDisplayProduct = new DisplayStore();
+
+                //initializing allStore
+                //List<Store> storeList = allStore();
+
+                //calling method of DisplayStore to display list of store
+                // myDisplayProduct.FormatAndDisplay(storeList);
+
+                //customer choice of store
+                string storeNumber = Console.ReadLine();
+                // int storenumber = Int.Parse(storeNumber);
+                //display items available at that store
+                // List<List<Product>> desiredProduct = allProduct();
+
+                //creating object of class DisplayProduct
+                DisplayProduct displayProduct = new DisplayProduct();
+                //displayProduct.FormatAndDisplay(desiredProduct, storenumber);
+
+            }
+            Quit = Console.ReadLine();
+            Console.WriteLine("Thank you for visiting!");
+           
+
+        }
+           
+        static string GetConnectionString()
         {
-            string path = "../../../../../../desktop/connectionStringGrocery";
-            string json;
+            /*string path = "../../../../../../../../../../connection-string-grocery.json";
+           string json;
             try
             {
                 json = File.ReadAllText(path);
             }
+               
             catch(IOException)
             {
+                Console.WriteLine("File path not found");
+                throw;
+                
+            }
+
+            string connection_string = JsonSerializer.Deserialize<string>(json);
+            return connection_string;    */
+            return "Server=tcp:revature-trainning-2020.database.windows.net,1433;Initial Catalog=GroceryStore;Persist Security Info=False;User ID=dhurba21;Password=Sci00100azure?;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+
+        }
+        //see if the customer id already exists in the database
+        public static void searchForCustomer(string ssn)
+        {
+            if (ssn.Length==9) {
+               using var context = Context.GetContext(s_dbContextOptions);
+               
+                var listOFCustomer = context.Customers.ToList();
+                int i;
+                for ( i=0; i < listOFCustomer.Count; i++)
+                {
+                    if(listOFCustomer[i].CustomerId== int.Parse(ssn))
+                    {
+                        Console.WriteLine($"welcome back {listOFCustomer[i].FirstName} ");
+                        Console.WriteLine("Which location would you like to shop today from?");
+                        Console.WriteLine($"Choose 1 for Store1, 2 for Store2 and 3 for Store3");
+                        //display list of stores to choose from.
+                        Display.DisplayStoreList(s_dbContextOptions);
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You are a new customer! your first name please");
+                    }
+                }
+                /*
+                {
+                    if (int.Parse(ssn) == customer.CustomerId)
+                    {
+                        Console.WriteLine($"welcome back {customer.FirstName} ");
+                    }
+                    else false;
+                    {
+                        Console.WriteLine("You are a new customer! your first name please");
+                    }
+                }*/
 
             }
+            else { Console.WriteLine("please provide 9 digit ssn number"); }
+
+           
+
+        }
+       /* public static void Display5Track()
+        {
+            using var context = Context.GetContext(s_dbContextOptions);
+            var names = context.Products.Take(3);
+            foreach(var x in names)
+            {
+                Console.WriteLine(x.Name);
+            }
+            Console.WriteLine(names);
+            
            
         }
 /*

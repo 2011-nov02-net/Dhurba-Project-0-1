@@ -3,6 +3,7 @@ using System.Collections.Generic;
 namespace GroceryStore
 {
     public class DisplayStore : IDisplay
+
     {
         public void FormatAndDisplay(List<Store> storeList)
         {
