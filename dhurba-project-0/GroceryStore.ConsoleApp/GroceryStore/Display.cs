@@ -44,22 +44,25 @@ namespace GroceryStore
             else
             {
                 Console.WriteLine("Invalid number");
-                //throw new ArgumentException("You Have to choose either 1 or 2 or 3");
+                
                
             }
             
             using var context= Context.GetContext(s_dbContextOptions);
-            // getting rows from inventory stores
+
+            // getting list from inventory stores
             var productList = context.InventoryStores;
+
             //getting a list of products in inventory store with storeId that the customer choose
-            //casting('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty').
+           
 
             var productListForAStore = productList.Include(x=>x.Product).Where(x => x.StoreId==storeid);
 
             //printing out list of products in console for customer to choose.
+            
             foreach(var product in productListForAStore)
             {
-                Console.WriteLine($"id: {product.ProductId} Name: {product.Product.Name} Quantity: {product.ProductQuantity}");
+                Console.WriteLine($"id: {product.ProductId} Name: {product.Product.Name} Quantity: {product.ProductQuantity} Price:{product.Price}");
             }
 
             

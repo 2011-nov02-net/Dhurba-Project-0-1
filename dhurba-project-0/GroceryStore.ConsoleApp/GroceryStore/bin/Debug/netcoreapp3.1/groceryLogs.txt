@@ -1,0 +1,101 @@
+info: 11/17/2020 21:31:08.536 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.0 initialized 'GroceryStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: Nonedbug: 11/17/2020 21:31:08.589 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Customer>()'dbug: 11/17/2020 21:31:08.711 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Customer>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Customer.CustomerId (int) Required PK AfterSave:Throw, 0], [Property: Customer.FirstName (string) Required MaxLength(30) Ansi, 1], [Property: Customer.LastName (string) Required MaxLength(30) Ansi, 2], }
+              SELECT c.CUSTOMER_ID, c.FIRST_NAME, c.LAST_NAME
+              FROM CUSTOMER AS c), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Customer>, 
+          GroceryStore.DataModel.GroceryStoreContext, 
+          False, 
+          False
+      )'dbug: 11/17/2020 21:31:08.772 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.dbug: 11/17/2020 21:31:08.776 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (41ms).dbug: 11/17/2020 21:31:08.779 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.596 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.601 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[CUSTOMER_ID], [c].[FIRST_NAME], [c].[LAST_NAME]
+      FROM [CUSTOMER] AS [c]info: 11/17/2020 21:31:09.694 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (93ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[CUSTOMER_ID], [c].[FIRST_NAME], [c].[LAST_NAME]
+      FROM [CUSTOMER] AS [c]dbug: 11/17/2020 21:31:09.722 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.753 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.753 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.757 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.dbug: 11/17/2020 21:31:09.759 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.764 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.info: 11/17/2020 21:31:09.788 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.0 initialized 'GroceryStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: Nonedbug: 11/17/2020 21:31:09.788 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Store>()'dbug: 11/17/2020 21:31:09.791 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Store>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Store.StoreId (string) Required PK AfterSave:Throw MaxLength(30) Ansi, 0], [Property: Store.City (string) Required MaxLength(30) Ansi, 1], [Property: Store.Name (string) Required MaxLength(30) Ansi, 2], [Property: Store.State (string) Required MaxLength(30) Ansi, 3], }
+              SELECT s.STORE_ID, s.CITY, s.NAME, s.STATE
+              FROM STORE AS s), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Store>, 
+          GroceryStore.DataModel.GroceryStoreContext, 
+          False, 
+          False
+      )'dbug: 11/17/2020 21:31:09.791 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.dbug: 11/17/2020 21:31:09.791 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).dbug: 11/17/2020 21:31:09.791 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.792 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.792 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[STORE_ID], [s].[CITY], [s].[NAME], [s].[STATE]
+      FROM [STORE] AS [s]info: 11/17/2020 21:31:09.864 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (72ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[STORE_ID], [s].[CITY], [s].[NAME], [s].[STATE]
+      FROM [STORE] AS [s]dbug: 11/17/2020 21:31:09.884 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Store' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.892 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Store' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.892 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'GroceryStoreContext' started tracking 'Store' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.dbug: 11/17/2020 21:31:09.892 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.dbug: 11/17/2020 21:31:09.892 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.892 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:09.894 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'GroceryStoreContext' disposed.dbug: 11/17/2020 21:31:09.895 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'GroceryStoreContext' disposed.info: 11/17/2020 21:31:37.789 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.0 initialized 'GroceryStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: Nonedbug: 11/17/2020 21:31:37.804 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<InventoryStore>()
+          .Include(x => x.Product)
+          .Where(x => x.StoreId == __storeid_0)'dbug: 11/17/2020 21:31:37.839 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query) 
+      Including navigation: 'InventoryStore.Product'.dbug: 11/17/2020 21:31:37.878 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<InventoryStore>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+              SELECT i.PRICE, i.PRODUCT_ID, i.PRODUCT_QUANTITY, i.STORE_ID, p.PRODUCT_ID, p.NAME
+              FROM INVENTORY_STORE AS i
+              INNER JOIN PRODUCT AS p ON i.PRODUCT_ID == p.PRODUCT_ID
+              WHERE i.STORE_ID == @__storeid_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, InventoryStore>, 
+          GroceryStore.DataModel.GroceryStoreContext, 
+          False, 
+          False
+      )'dbug: 11/17/2020 21:31:37.882 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.dbug: 11/17/2020 21:31:37.882 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).dbug: 11/17/2020 21:31:37.886 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:37.886 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'GroceryStore' on server 'tcp:revature-trainning-2020.database.windows.net,1433'.dbug: 11/17/2020 21:31:37.888 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__storeid_0='?' (Size = 30) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[PRICE], [i].[PRODUCT_ID], [i].[PRODUCT_QUANTITY], [i].[STORE_ID], [p].[PRODUCT_ID], [p].[NAME]
+      FROM [INVENTORY_STORE] AS [i]
+      INNER JOIN [PRODUCT] AS [p] ON [i].[PRODUCT_ID] = [p].[PRODUCT_ID]
+      WHERE [i].[STORE_ID] = @__storeid_0info: 11/17/2020 21:31:38.043 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (156ms) [Parameters=[@__storeid_0='?' (Size = 30) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[PRICE], [i].[PRODUCT_ID], [i].[PRODUCT_QUANTITY], [i].[STORE_ID], [p].[PRODUCT_ID], [p].[NAME]
+      FROM [INVENTORY_STORE] AS [i]
+      INNER JOIN [PRODUCT] AS [p] ON [i].[PRODUCT_ID] = [p].[PRODUCT_ID]
+      WHERE [i].[STORE_ID] = @__s

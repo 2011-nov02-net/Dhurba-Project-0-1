@@ -6,14 +6,15 @@ namespace GroceryStore{
 {
 		//create a dictionary for collection of customer
 		Dictionary<int, string> allCustomer = new Dictionary<int, string>();
-	private int Ssn { get; }
-	public string FullName { get; }
-	
+	private int CustomerId { get; }
+	public string FirstName { get; }
+	public string LastName { get; }
 
-	public Customer(int ssn,string fullname)
+	public Customer(int ssn,string firstname,string lastname)
 	{
-		Ssn = ssn;
-		FullName = fullname;
+			CustomerId = ssn;
+			FirstName = firstname;
+			LastName =   lastname;
 		
 	}
 
