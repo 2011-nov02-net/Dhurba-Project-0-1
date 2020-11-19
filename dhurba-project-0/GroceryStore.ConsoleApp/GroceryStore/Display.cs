@@ -71,6 +71,20 @@ namespace GroceryStore
            
         }
 
+        public static void DisplayCustomerOrderItems(DbContextOptions<GroceryStoreContext> s_dbContextOptions,int orderid)
+        {
+          using  var context = new GroceryStoreContext(s_dbContextOptions);
+            var orderitemslist = context.OrderItems;
+            var orderItems=orderitemslist
+                .Include(x=>x.Product)
+                .Where(x => x.OrderId == orderid);
+            foreach(var orderitem in orderItems)
+            {
+                Console.WriteLine($"{orderitem.Product.Name} {orderitem.Quantity}");
+            }
+
+        }
+
 
     }
 

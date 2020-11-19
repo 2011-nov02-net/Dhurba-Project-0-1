@@ -1,3 +1,4 @@
+select * from product
 --DROP TABLE INVENTORY_STORE
 
 CREATE TABLE CUSTOMER(
